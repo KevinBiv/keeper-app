@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import AddIcon from "@material-ui/icons/Add";
-import Fab from "@material-ui/core/Fab";
-import Zoom from "@material-ui/core/Zoom";
+import { BiAddToQueue } from 'react-icons/bi';
+import { FaBandcamp } from 'react-icons/fa';
+import { AiOutlineZoomIn } from 'react-icons/ai';
 
 function CreateArea(props) {
   const [isExpanded, setExpanded] = useState(false);
@@ -55,11 +55,11 @@ function CreateArea(props) {
           placeholder="Take a note..."
           rows={isExpanded ? 3 : 1}
         />
-        <Zoom in={isExpanded}>
-          <Fab onClick={submitNote}>
-            <AddIcon />
-          </Fab>
-        </Zoom>
+        <AiOutlineZoomIn in={isExpanded}>
+          <FaBandcamp onClick={submitNote}>
+            <BiAddToQueue />
+          </FaBandcamp>
+        </AiOutlineZoomIn>
       </form>
     </div>
   );
